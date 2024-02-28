@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -24,6 +25,7 @@ public class TestNGDataPRo {
 		driver.get("http://automationbykrishna.com/");
 		Thread.sleep(2000);		
 		WebElement element = driver.findElement(By.id("registration2"));
+		Assert.assertTrue(element.isDisplayed());
 		element.click();
 		Thread.sleep(2000);
 		WebElement userName = driver.findElement(By.id("unameSignin"));
